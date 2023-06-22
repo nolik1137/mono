@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <link rel="stylesheet" href="css/tr.css">
+    <style>
+        .№1 div p {
+  color: red;
+}
+.№2  div h2 {
+    color: green;
+}
+.№3 #test p {
+    color: #0a33e9;
+}
+.№4 #test h2 {
+    color: rgb(72, 255, 0);
+}
+.№5 .bbb {
+  background-color: yellow;
+  font-weight: bold;
+}
+.№6 #test .bbb {
+  background-color: rgb(9, 255, 0);
+  font-weight: bold;
+}
+.№7 p.bbb {
+
+  color: red;
+  font-weight: bold;
+}
+.№8 h2.bbb {
+  
+  color: red;
+  font-size: 24px;
+}
+.№9 #test .bbb {
+  color: red;
+  font-weight: bold;
+}
+.№10 div h2, .№10 div p {
+  color: red;
+}
+.№11 .bbb, .xxx {
+  color: #0a33e9;
+}
+.№12 p.bbb, .№12 h2.xxx {
+  color: #0a33e9;
+}
+.№13 #test p.bbb, #test p.xxx {
+  color: green;
+}
+.№14 .fff {
+  color: red;
+}
+.№15 .fff p {
+  color: #0a33e9;
+}
+.№16 p.fff {
+  color: blueviolet;
+}
+.№17 .fff .bbb {
+  color: red;
+}
+.№18 .fff .bbb {
+  color: red;
+}
+
+.№19 #test a:link,
+.container #test a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+.№19 #test a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.№20 .www:link, .№20 .www:visited {
+  color: blue;
+  text-decoration: underline;
+}
+
+.№20 .www:hover {
+  text-decoration: none;
+}
+.№21 #test .www:link, .№21 #test .www:visited {
+  color: green;
+  text-decoration: none;
+}
+
+.№21 #test .www:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.№22 .eee .www:link, .№22 .eee .www:visited {
+  color: purple;
+  text-decoration: none;
+}
+
+.№22 .eee .www:hover {
+  color: orange;
+  text-decoration: underline;
+}
+.№23 p > i {
+  color: red;
+  font-style: italic;
+}
+
+.№24 ul > li {
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+.№25 p > a, .№25 a.test {
+  color: red;
+  text-decoration: none;
+}
+
+.№25 p > a:hover, a.test:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.№26 b + i {
+  color: red;
+}
+.№27 #test b + i {
+  color: blue;
+  font-style: italic;
+}
+.№28 ul + p {
+  color: red;
+}
+.№29 h1 ~ p {
+  color: green;
+}
+.№30 #test h2 ~ p {
+  color: #0a33e9;
+}
+.№31 p i {
+  color:aqua;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="№1">
+        Задание №1
+        <div>
+            <p>Абзац внутри первого дива</p>
+            <p>Еще один абзац внутри первого дива</p>
+          </div>
+          <div>
+            <p>Абзац внутри второго дива</p>
+          </div>
+    </div>
+    <div class="№2">
+        Задание №2
+        <div>
+            <h2>Заголовок 1</h2>
+          </div>
+          <div>
+            <h2>Заголовок 2</h2>
+          </div>
+    </div>
+    <div class="№3">
+        Задание №3
+      <div>
+        <p>Этот абзац не относится к элементу с id=test</p>
+      </div>
+      <div id="test">
+        <p>Первый абзац из элемента с id=test</p>
+        <p>Второй абзац из элемента с id=test</p>
+      </div>
+    </div>  
+    <div class="№4">
+        Задание №4
+      <div>
+        <h2>Этот заголовок не относится к элементу с id=test</h2>
+      </div>
+      <div id="test">
+        <h2>Первый заголовок из элемента с id=test</h2>
+        <h2>Второй заголовок из элемента с id=test</h2>
+      </div>
+    </div> 
+    <div class="№5">
+        Задание №5
+        <div class="aaa">Элемент 1</div>
+        <div class="bbb">Элемент 2</div>
+        <p class="bbb">Элемент 3</p>
+      </div>
+      <div class="№6">
+        Задание №6
+      <div>
+        <p class="bbb">Этот элемент не относится к элементу с id=test</p>
+      </div>
+      <div id="test">
+        <div class="bbb">Первый элемент с классом bbb из элемента с id=test</div>
+        <p class="bbb">Второй элемент с классом bbb из элемента с id=test</p>
+      </div>
+      </div>  
+    <div class="№7">
+        Задание №7
+        <p class="bbb">Абзац 1</p>
+        <p>Абзац 2</p>
+        <p class="bbb">Абзац 3</p>
+        <p>Абзац 4</p>
+
+    </div> 
+    <div class="№8">
+        Задание №8
+        <div>
+            <h2>Заголовок 1</h2>
+            <p>Текст</p>
+          </div>
+          <div>
+            <h2 class="bbb">Заголовок 2</h2>
+            <p>Текст</p>
+          </div>
+          <div>
+            <h2 class="bbb">Заголовок 3</h2>
+            <p>Текст</p>
+          </div>
+          
+    </div>
+    <div class="№9">
+        Задание №9
+        <div id="test">
+            <p>Абзац 1</p>
+            <p class="bbb">Абзац 2 с классом bbb</p>
+            <p class="bbb">Абзац 3 с классом bbb</p>
+            <p>Абзац 4</p>
+          </div>
+          
+    </div>
+    <div class="№10">
+        Задание №10
+            <div>
+              <h2>Title 1</h2>
+              <p>Paragraph 1</p>
+            </div>
+            <div>
+              <h2>Title 2</h2>
+              <p>Paragraph 2</p>
+            </div>
+    </div> 
+
+    <div class="№11">
+        Задание №11
+        <div class="bbb">Элемент 1 с классом bbb</div>
+        <p class="xxx">Элемент 2 с классом xxx</p>
+        <div class="bbb">Элемент 3 с классом bbb</div>
+        <p class="yyy">Элемент 4 с классом yyy</p>
+        <span class="xxx">Элемент 5 с классом xxx</span>
+    </div>
+
+    <div class="№12">
+        Задание №12
+        <h2 class="xxx">Заголовок 1 </h2>
+        <p class="bbb">Абзац 1</p>
+        <p>Абзац 2</p>
+        <p class="bbb">Абзац 3</p>
+        <h2 class="yyy">Заголовок 2</h2>
+        <p class="xxx">Абзац 4</p>
+    </div>
+    <div class="№13">
+        Задание №13
+        <div id="test">
+            <p class="bbb">Абзац 1</p>
+            <p class="xxx">Абзац 2</p>
+            <p>Абзац 3</p>
+            <p class="bbb">Абзац 4</p>
+        </div>   
+    </div>
+    <div class="№14">
+        Задание №14
+        <p class="fff">Абзац 1</p>
+        <h2 class="fff">Заголовок 1</h2>
+        <div class="fff">Блок 1</div>
+        <p>Абзац 2</p>
+        <h2>Заголовок 2</h2>
+        <div>Блок 2</div>
+      </div>
+      <div class="№15">
+        Задание №15
+        <div class="fff">
+            <p>Абзац 1</p>
+            <p>Абзац 2</p>
+            <p>Абзац 3</p>
+          </div>
+      </div>
+    <div class="№16">
+        Задание №16
+        <p class="fff">Абзац 1</p>
+        <p>Абзац 2</p>
+        <p class="fff">Абзац 3</p>
+        <p>Абзац 4</p>
+        <p class="fff">Абзац 5</p>
+    </div>
+    <div class="№17">
+        Задание №17
+        <div class="fff">
+            <p class="bbb">Абзац 1</p>
+            <div class="bbb">Элемент 1</div>
+            <p class="xxx">Абзац 2</p>
+            <p class="bbb">Абзац 3</p>
+            <div class="bbb">Элемент 2</div>
+          </div>
+          
+    </div>
+    <div class="№18">
+        Задание №18
+        <div class="fff">
+            <h2 class="bbb">Заголовок 1</h2>
+            <p>Абзац 1</p>
+            <p>Абзац 2</p>
+            <h2>Заголовок 2</h2>
+            <h2 class="bbb">Заголовок 3</h2>
+            <p>Абзац 3</p>
+            <p>Абзац 4</p>
+          </div>
+    </div>
+    <div class="№19">
+      Задание №19
+      <div id="test">
+        <a href="#">Ссылка 1</a>
+        <a href="#">Ссылка 2</a>
+        <a href="#">Ссылка 3</a>
+      </div>
+    </div>
+    <div class="№20">
+      Задание №20
+      <br>
+      <a href="#" class="www">Ссылка 1</a>
+      <a href="#" class="www">Ссылка 2</a>
+      <a href="#" class="www">Ссылка 3</a>
+    </div>
+    <div class="№21">
+      Задание №21
+      <div id="test">
+        <a href="#" class="www">Ссылка 1</a>
+        <a href="#" class="www">Ссылка 2</a>
+        <a href="#" class="www">Ссылка 3</a>
+      </div>
+    </div>
+    <div class="№22">
+      Задание №22
+      <div class="eee">
+        <a href="#" class="www">Ссылка 1</a>
+        <a href="#" class="www">Ссылка 2</a>
+        <a href="#" class="www">Ссылка 3</a>
+      </div>
+    </div>
+    <div class="№23">
+      Задание №23
+      <p>Это <i>Перый i </i> и текст.</p>
+      <p>А это <span><i>Еще один i </i></span> и текст.</p>
+    </div>
+    <div class="№24">
+      Задание №24
+      <ul>
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>
+          Элемент 3
+          <ul>
+            <li>Элемент 3.1</li>
+            <li>Элемент 3.2</li>
+          </ul>
+        </li>
+        <li>
+          Элемент 4
+          <ol>
+            <li>Элемент 4.1</li>
+            <li>Элемент 4.2</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <div class="№25">
+      Задание №25
+      <p>Это <a href="#">ссылка 1</a> внутри абзаца.</p>
+      <p>Это <a href="#" class="test">ссылка 2</a> внутри абзаца.</p>
+      <a href="#" class="test">Это <code>&lt;a&gt;</code> с классом "test" вне абзаца.</a>
+    </div>
+    <div class="№26">
+      Задание №26
+      <p><b>Жирный текст</b> <i>Курсивный текст</i></p>
+      <p><b>Жирный текст</b> <span><i>Курсивный текст</i></span></p>
+      <p><b>Жирный текст</b><i>Курсивный текст</i> Некоторый текст.</p>
+    </div>
+    <div class="№27">
+      Задание №27
+      <div id="test">
+        <b>Жирный текст</b>
+        <i>Курсивный текст</i>
+        <i>Еще курсивный текст</i>
+        <span>Этот элемент не будет выбран</span>
+        <b>Еще жирный текст</b>
+        <i>Курсивный текст после жирного</i>
+      </div>
+      
+    </div>
+    <div class="№28">
+      Задание №28
+      <div>
+        <ul>
+          <li>Элемент 1</li>
+          <li>Элемент 2</li>
+        </ul>
+        <p>Абзац 1</p>
+        <p>Абзац 2</p>
+        <ul>
+          <li>Элемент 3</li>
+          <li>Элемент 4</li>
+        </ul>
+        <p>Абзац 3</p>
+      </div>
+      
+    </div>
+    <div class="№29">
+      Задание №29
+        <h1>Заголовок 1</h1>
+        <p>Первый абзац</p>
+        <p>Второй абзац</p>
+        <h2>Заголовок 2</h2>
+        <p>Третий абзац</p>
+    </div>
+    <div class="№30">
+      Задание №30
+      <div id="test">
+        <h1>Заголовок первого уровня</h1>
+        <p>Абзац после заголовка первого уровня</p>
+        <h2>Заголовок второго уровня</h2>
+        <p>Абзац после заголовка второго уровня</p>
+        <p>Еще один абзац после заголовка второго уровня</p>
+        <h2>Еще один заголовок второго уровня</h2>
+        <p>Абзац после второго заголовка второго уровня</p>
+        <ul>
+          <li>Элемент списка 1</li>
+          <li>Элемент списка 2</li>
+        </ul>
+        <p>Абзац после списка</p>
+      </div>
+    </div>
+    <div class="№31">
+      Задание №31 <br>
+      <p>Этот текст содержит <i>курсив</i> и <i>еще курсив</i> внутри абзаца.</p>
+    </div>
+</body>
+</html>

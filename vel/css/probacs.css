@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    font-size: 15px;
+}
+.dvel{
+    width: 285px;
+    height: 186px;
+    left: 1305px;
+    top: 280px;
+}
+
+.jvel{
+    
+    width: 285px;
+    height: 186px;
+    left: 817.5px;
+    top: 280px;
+}
+
+.mvel{
+    
+    width: 285px;
+    height: 186px;
+    left: 330px;
+    top: 280px;
+}
+
+.el{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto  ;
+}
+.container{
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    flex-grow: 1
+}   
