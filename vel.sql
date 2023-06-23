@@ -5,7 +5,7 @@
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.2
 
--- Started on 2023-06-23 11:54:17
+-- Started on 2023-06-23 13:43:14
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -194,6 +194,60 @@ CREATE TABLE public.products (
 ALTER TABLE public.products OWNER TO postgres;
 
 --
+-- TOC entry 3562 (class 0 OID 0)
+-- Dependencies: 240
+-- Name: TABLE products; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE public.products IS 'Таблица товаров';
+
+
+--
+-- TOC entry 3563 (class 0 OID 0)
+-- Dependencies: 240
+-- Name: COLUMN products.id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.products.id IS 'Уникальный идентификатор товара';
+
+
+--
+-- TOC entry 3564 (class 0 OID 0)
+-- Dependencies: 240
+-- Name: COLUMN products.name; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.products.name IS 'Название товара';
+
+
+--
+-- TOC entry 3565 (class 0 OID 0)
+-- Dependencies: 240
+-- Name: COLUMN products.description; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.products.description IS 'Описание товара';
+
+
+--
+-- TOC entry 3566 (class 0 OID 0)
+-- Dependencies: 240
+-- Name: COLUMN products.price; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.products.price IS 'Цена товара';
+
+
+--
+-- TOC entry 3567 (class 0 OID 0)
+-- Dependencies: 240
+-- Name: COLUMN products.quantity; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.products.quantity IS 'Количество товара';
+
+
+--
 -- TOC entry 241 (class 1259 OID 33268)
 -- Name: avg_price; Type: VIEW; Schema: public; Owner: postgres
 --
@@ -229,6 +283,96 @@ CREATE TABLE public.bicycles (
 ALTER TABLE public.bicycles OWNER TO postgres;
 
 --
+-- TOC entry 3570 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: TABLE bicycles; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE public.bicycles IS 'Таблица велосипедов';
+
+
+--
+-- TOC entry 3571 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.id IS 'Уникальный идентификатор велосипеда';
+
+
+--
+-- TOC entry 3572 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.model; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.model IS 'Модель велосипеда';
+
+
+--
+-- TOC entry 3573 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.price; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.price IS 'Цена велосипеда';
+
+
+--
+-- TOC entry 3574 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.frame_material; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.frame_material IS 'Материал велосипеда';
+
+
+--
+-- TOC entry 3575 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.frame_size; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.frame_size IS 'Размер рамы велосипеда';
+
+
+--
+-- TOC entry 3576 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.wheel_size; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.wheel_size IS 'Размер колес велосипеда';
+
+
+--
+-- TOC entry 3577 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.color; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.color IS 'Цвет велосипеда';
+
+
+--
+-- TOC entry 3578 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.type_id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.type_id IS 'Уникальный идентификатор типа велосипеда';
+
+
+--
+-- TOC entry 3579 (class 0 OID 0)
+-- Dependencies: 242
+-- Name: COLUMN bicycles.brand_id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.bicycles.brand_id IS 'Уникальный идентификатор бренда велосипеда';
+
+
+--
 -- TOC entry 243 (class 1259 OID 33275)
 -- Name: brands; Type: TABLE; Schema: public; Owner: postgres
 --
@@ -240,6 +384,33 @@ CREATE TABLE public.brands (
 
 
 ALTER TABLE public.brands OWNER TO postgres;
+
+--
+-- TOC entry 3581 (class 0 OID 0)
+-- Dependencies: 243
+-- Name: TABLE brands; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE public.brands IS 'Таблица брендов';
+
+
+--
+-- TOC entry 3582 (class 0 OID 0)
+-- Dependencies: 243
+-- Name: COLUMN brands.id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.brands.id IS 'Уникальный идентификатор бренда';
+
+
+--
+-- TOC entry 3583 (class 0 OID 0)
+-- Dependencies: 243
+-- Name: COLUMN brands.name_brands; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.brands.name_brands IS 'Название бренда';
+
 
 --
 -- TOC entry 244 (class 1259 OID 33278)
@@ -275,6 +446,33 @@ CREATE TABLE public.types (
 ALTER TABLE public.types OWNER TO postgres;
 
 --
+-- TOC entry 3586 (class 0 OID 0)
+-- Dependencies: 245
+-- Name: TABLE types; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE public.types IS 'Таблица типов(горный,городской...)';
+
+
+--
+-- TOC entry 3587 (class 0 OID 0)
+-- Dependencies: 245
+-- Name: COLUMN types.id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.types.id IS 'Уникальный идентификатор типа';
+
+
+--
+-- TOC entry 3588 (class 0 OID 0)
+-- Dependencies: 245
+-- Name: COLUMN types.name_types; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.types.name_types IS 'Название типа';
+
+
+--
 -- TOC entry 246 (class 1259 OID 33285)
 -- Name: bicycle_types; Type: VIEW; Schema: public; Owner: postgres
 --
@@ -306,7 +504,7 @@ CREATE SEQUENCE public.bicycles_id_seq
 ALTER TABLE public.bicycles_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3569 (class 0 OID 0)
+-- TOC entry 3591 (class 0 OID 0)
 -- Dependencies: 247
 -- Name: bicycles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -331,7 +529,7 @@ CREATE SEQUENCE public.brands_id_seq
 ALTER TABLE public.brands_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3570 (class 0 OID 0)
+-- TOC entry 3592 (class 0 OID 0)
 -- Dependencies: 248
 -- Name: brands_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -356,6 +554,60 @@ CREATE TABLE public.clients (
 ALTER TABLE public.clients OWNER TO postgres;
 
 --
+-- TOC entry 3593 (class 0 OID 0)
+-- Dependencies: 249
+-- Name: TABLE clients; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE public.clients IS 'Таблица клиентов';
+
+
+--
+-- TOC entry 3594 (class 0 OID 0)
+-- Dependencies: 249
+-- Name: COLUMN clients.id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.clients.id IS 'Уникальный идентификатор клиента';
+
+
+--
+-- TOC entry 3595 (class 0 OID 0)
+-- Dependencies: 249
+-- Name: COLUMN clients.name; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.clients.name IS 'Имя клиента';
+
+
+--
+-- TOC entry 3596 (class 0 OID 0)
+-- Dependencies: 249
+-- Name: COLUMN clients.address; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.clients.address IS 'Адрес клиента';
+
+
+--
+-- TOC entry 3597 (class 0 OID 0)
+-- Dependencies: 249
+-- Name: COLUMN clients.phone; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.clients.phone IS 'Телефон клиента';
+
+
+--
+-- TOC entry 3598 (class 0 OID 0)
+-- Dependencies: 249
+-- Name: COLUMN clients.email; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.clients.email IS 'Электронная почта клиента';
+
+
+--
 -- TOC entry 250 (class 1259 OID 33294)
 -- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
@@ -372,7 +624,7 @@ CREATE SEQUENCE public.clients_id_seq
 ALTER TABLE public.clients_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3574 (class 0 OID 0)
+-- TOC entry 3602 (class 0 OID 0)
 -- Dependencies: 250
 -- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -413,6 +665,51 @@ CREATE TABLE public.order_items (
 ALTER TABLE public.order_items OWNER TO postgres;
 
 --
+-- TOC entry 3604 (class 0 OID 0)
+-- Dependencies: 252
+-- Name: TABLE order_items; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE public.order_items IS 'Таблица элементов заказов';
+
+
+--
+-- TOC entry 3605 (class 0 OID 0)
+-- Dependencies: 252
+-- Name: COLUMN order_items.id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.order_items.id IS 'Уникальный идентификатор элемента заказа';
+
+
+--
+-- TOC entry 3606 (class 0 OID 0)
+-- Dependencies: 252
+-- Name: COLUMN order_items.order_id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.order_items.order_id IS 'Идентификатор заказа, к которому относится элемент';
+
+
+--
+-- TOC entry 3607 (class 0 OID 0)
+-- Dependencies: 252
+-- Name: COLUMN order_items.product_id; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.order_items.product_id IS 'Идентификатор продукта, связанного с элементом';
+
+
+--
+-- TOC entry 3608 (class 0 OID 0)
+-- Dependencies: 252
+-- Name: COLUMN order_items.quantity; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.order_items.quantity IS 'Количество элементов в заказе';
+
+
+--
 -- TOC entry 253 (class 1259 OID 33302)
 -- Name: order_items_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
@@ -429,7 +726,7 @@ CREATE SEQUENCE public.order_items_id_seq
 ALTER TABLE public.order_items_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3577 (class 0 OID 0)
+-- TOC entry 3610 (class 0 OID 0)
 -- Dependencies: 253
 -- Name: order_items_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -502,7 +799,7 @@ CREATE SEQUENCE public.orders_id_seq
 ALTER TABLE public.orders_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3581 (class 0 OID 0)
+-- TOC entry 3614 (class 0 OID 0)
 -- Dependencies: 257
 -- Name: orders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -527,7 +824,7 @@ CREATE SEQUENCE public.products_id_seq
 ALTER TABLE public.products_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3582 (class 0 OID 0)
+-- TOC entry 3615 (class 0 OID 0)
 -- Dependencies: 258
 -- Name: products_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -552,7 +849,7 @@ CREATE SEQUENCE public.types_id_seq
 ALTER TABLE public.types_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3583 (class 0 OID 0)
+-- TOC entry 3616 (class 0 OID 0)
 -- Dependencies: 259
 -- Name: types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -623,7 +920,7 @@ ALTER TABLE ONLY public.types ALTER COLUMN id SET DEFAULT nextval('public.types_
 --
 
 COPY pgagent.pga_jobagent (jagpid, jaglogintime, jagstation) FROM stdin;
-6292	2023-06-23 03:24:09.608264+03	DESKTOP-4D9JRGN
+6180	2023-06-23 12:10:20.4793+03	DESKTOP-4D9JRGN
 \.
 
 
@@ -872,6 +1169,70 @@ COPY pgagent.pga_jobsteplog (jslid, jsljlgid, jsljstid, jslstatus, jslresult, js
 60	60	2	f	1	2023-05-27 03:32:01.017511+03	00:00:00.141818	Couldn't get a connection to the database!
 61	61	2	s	0	2023-05-27 03:37:03.22186+03	00:00:00.045528	
 62	62	2	f	-1	2023-05-27 04:37:04.184847+03	00:00:00.039343	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+63	63	2	f	-1	2023-05-27 05:37:00.422451+03	00:00:00.036894	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+64	64	2	f	-1	2023-05-27 06:37:02.407371+03	00:00:00.035748	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+65	65	2	f	-1	2023-05-27 11:35:35.673302+03	00:00:00.097265	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+66	66	2	f	-1	2023-05-27 11:37:01.492801+03	00:00:00.039494	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+67	67	2	f	-1	2023-05-27 12:37:04.536368+03	00:00:00.182109	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+68	68	2	f	-1	2023-05-27 13:37:01.110993+03	00:00:00.03935	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+69	69	2	f	-1	2023-05-27 14:37:02.980106+03	00:00:00.054815	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+70	70	2	f	-1	2023-05-27 15:37:04.516826+03	00:00:00.03813	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+71	71	2	f	-1	2023-05-27 16:37:01.182359+03	00:00:00.042735	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+72	72	2	f	-1	2023-05-27 17:37:03.927081+03	00:00:00.040738	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+73	73	2	f	-1	2023-05-27 18:37:01.522616+03	00:00:00.060005	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+74	74	2	f	-1	2023-05-27 19:37:02.554724+03	00:00:00.070747	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+75	75	2	f	-1	2023-05-27 20:37:03.494119+03	00:00:00.039662	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+76	76	2	f	-1	2023-05-27 21:37:02.329968+03	00:00:00.066027	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+77	77	2	f	-1	2023-05-28 10:20:24.539887+03	00:00:00.093772	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+78	78	2	f	-1	2023-06-03 08:23:21.500363+03	00:00:00.179416	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+79	79	2	f	-1	2023-06-03 08:37:04.286605+03	00:00:00.038919	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+80	80	2	f	-1	2023-06-03 09:37:00.134062+03	00:00:00.048697	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+81	81	2	f	-1	2023-06-03 10:37:04.31942+03	00:00:00.036246	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+82	82	2	f	-1	2023-06-03 11:37:03.441487+03	00:00:00.040511	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+83	83	2	f	-1	2023-06-03 12:37:03.252906+03	00:00:00.146267	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+84	84	2	f	-1	2023-06-03 13:37:02.621586+03	00:00:00.168199	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+85	85	2	f	-1	2023-06-03 14:37:02.797992+03	00:00:00.037341	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+86	86	2	f	-1	2023-06-03 15:37:01.267666+03	00:00:00.036922	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+87	87	2	f	-1	2023-06-03 16:37:02.787405+03	00:00:00.03779	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+88	88	2	f	-1	2023-06-03 17:37:00.169367+03	00:00:00.042171	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+89	89	2	f	-1	2023-06-03 18:37:02.381016+03	00:00:00.181817	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+90	90	2	f	-1	2023-06-03 19:37:04.302682+03	00:00:00.048967	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+91	91	2	f	-1	2023-06-03 20:37:01.438639+03	00:00:00.038814	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+92	92	2	f	-1	2023-06-03 21:37:03.028611+03	00:00:00.04566	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+93	93	2	f	-1	2023-06-03 22:37:03.705342+03	00:00:00.05737	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+94	94	2	f	-1	2023-06-03 23:37:00.735593+03	00:00:00.038176	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+95	95	2	f	-1	2023-06-10 09:41:15.623189+03	00:00:00.046151	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+96	96	2	f	-1	2023-06-10 10:37:04.365612+03	00:00:00.056626	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+97	97	2	f	-1	2023-06-10 11:37:00.842281+03	00:00:00.038159	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+98	98	2	f	-1	2023-06-10 12:37:04.033803+03	00:00:00.076426	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+99	99	2	f	-1	2023-06-10 13:37:04.790599+03	00:00:00.041651	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+100	100	2	f	-1	2023-06-10 14:37:02.176449+03	00:00:00.042855	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+101	101	2	f	-1	2023-06-10 15:37:02.827269+03	00:00:00.041994	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+102	102	2	f	-1	2023-06-10 16:37:02.047962+03	00:00:00.040769	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+103	103	2	f	-1	2023-06-10 17:37:01.152594+03	00:00:00.036792	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+104	104	2	f	-1	2023-06-10 18:37:01.43613+03	00:00:00.044449	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+105	105	2	f	-1	2023-06-10 19:37:04.124574+03	00:00:00.058573	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+106	106	2	f	-1	2023-06-10 20:37:02.47893+03	00:00:00.055601	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+107	107	2	f	-1	2023-06-10 21:37:01.936304+03	00:00:00.041671	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+108	108	2	f	-1	2023-06-10 22:37:01.293968+03	00:00:00.037474	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+109	109	2	f	-1	2023-06-11 08:35:47.19322+03	00:00:00.275181	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+110	111	2	f	-1	2023-06-17 00:37:03.965839+03	00:00:00.068847	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+111	112	2	f	-1	2023-06-17 01:37:00.630637+03	00:00:00.066569	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+112	113	2	f	-1	2023-06-17 09:04:53.039654+03	00:00:00.04321	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+113	114	2	f	-1	2023-06-17 09:37:02.296369+03	00:00:00.04581	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+114	115	2	f	-1	2023-06-17 10:37:03.166999+03	00:00:00.039246	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+115	116	2	f	-1	2023-06-17 11:37:01.479521+03	00:00:00.042066	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+116	117	2	f	-1	2023-06-17 12:37:04.932574+03	00:00:00.051705	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+117	118	2	f	-1	2023-06-17 13:37:00.386426+03	00:00:00.038083	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+118	119	2	f	-1	2023-06-17 14:37:00.820314+03	00:00:00.074482	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+119	120	2	f	-1	2023-06-17 15:37:01.429776+03	00:00:00.039423	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+120	121	2	f	-1	2023-06-17 16:37:01.368517+03	00:00:00.038012	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+121	122	2	f	-1	2023-06-17 17:37:01.260452+03	00:00:00.037323	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+122	123	2	f	-1	2023-06-17 18:37:00.429205+03	00:00:00.041686	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+123	124	2	f	-1	2023-06-17 19:37:04.302202+03	00:00:00.147255	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+124	125	2	f	-1	2023-06-17 21:05:59.97225+03	00:00:00.795007	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+125	127	2	f	-1	2023-06-17 21:37:00.396694+03	00:00:00.039179	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
+126	128	2	f	-1	2023-06-18 09:41:45.240719+03	00:00:00.151404	ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "products_pkey"\nDETAIL:  Ключ "(id)=(8)" уже существует.\nCONTEXT:  SQL-функция "new_product", оператор 1
 \.
 
 
@@ -981,7 +1342,7 @@ COPY public.types (id, name_types) FROM stdin;
 
 
 --
--- TOC entry 3584 (class 0 OID 0)
+-- TOC entry 3617 (class 0 OID 0)
 -- Dependencies: 247
 -- Name: bicycles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -990,7 +1351,7 @@ SELECT pg_catalog.setval('public.bicycles_id_seq', 16, true);
 
 
 --
--- TOC entry 3585 (class 0 OID 0)
+-- TOC entry 3618 (class 0 OID 0)
 -- Dependencies: 248
 -- Name: brands_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -999,7 +1360,7 @@ SELECT pg_catalog.setval('public.brands_id_seq', 6, true);
 
 
 --
--- TOC entry 3586 (class 0 OID 0)
+-- TOC entry 3619 (class 0 OID 0)
 -- Dependencies: 250
 -- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -1008,7 +1369,7 @@ SELECT pg_catalog.setval('public.clients_id_seq', 10, true);
 
 
 --
--- TOC entry 3587 (class 0 OID 0)
+-- TOC entry 3620 (class 0 OID 0)
 -- Dependencies: 253
 -- Name: order_items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -1017,7 +1378,7 @@ SELECT pg_catalog.setval('public.order_items_id_seq', 32, true);
 
 
 --
--- TOC entry 3588 (class 0 OID 0)
+-- TOC entry 3621 (class 0 OID 0)
 -- Dependencies: 257
 -- Name: orders_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -1026,7 +1387,7 @@ SELECT pg_catalog.setval('public.orders_id_seq', 23, true);
 
 
 --
--- TOC entry 3589 (class 0 OID 0)
+-- TOC entry 3622 (class 0 OID 0)
 -- Dependencies: 258
 -- Name: products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -1035,7 +1396,7 @@ SELECT pg_catalog.setval('public.products_id_seq', 33, true);
 
 
 --
--- TOC entry 3590 (class 0 OID 0)
+-- TOC entry 3623 (class 0 OID 0)
 -- Dependencies: 259
 -- Name: types_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -1191,7 +1552,7 @@ GRANT USAGE ON SCHEMA public TO managers;
 
 
 --
--- TOC entry 3562 (class 0 OID 0)
+-- TOC entry 3568 (class 0 OID 0)
 -- Dependencies: 240
 -- Name: TABLE products; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1205,7 +1566,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.products TO example_user;
 
 
 --
--- TOC entry 3563 (class 0 OID 0)
+-- TOC entry 3569 (class 0 OID 0)
 -- Dependencies: 241
 -- Name: TABLE avg_price; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1218,7 +1579,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.avg_price TO managers;
 
 
 --
--- TOC entry 3564 (class 0 OID 0)
+-- TOC entry 3580 (class 0 OID 0)
 -- Dependencies: 242
 -- Name: TABLE bicycles; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1232,7 +1593,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.bicycles TO example_user;
 
 
 --
--- TOC entry 3565 (class 0 OID 0)
+-- TOC entry 3584 (class 0 OID 0)
 -- Dependencies: 243
 -- Name: TABLE brands; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1247,7 +1608,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.brands TO example_user;
 
 
 --
--- TOC entry 3566 (class 0 OID 0)
+-- TOC entry 3585 (class 0 OID 0)
 -- Dependencies: 244
 -- Name: TABLE bicycle_brands; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1260,7 +1621,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.bicycle_brands TO managers;
 
 
 --
--- TOC entry 3567 (class 0 OID 0)
+-- TOC entry 3589 (class 0 OID 0)
 -- Dependencies: 245
 -- Name: TABLE types; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1274,7 +1635,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.types TO example_user;
 
 
 --
--- TOC entry 3568 (class 0 OID 0)
+-- TOC entry 3590 (class 0 OID 0)
 -- Dependencies: 246
 -- Name: TABLE bicycle_types; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1287,7 +1648,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.bicycle_types TO managers;
 
 
 --
--- TOC entry 3571 (class 0 OID 0)
+-- TOC entry 3599 (class 0 OID 0)
 -- Dependencies: 249
 -- Name: TABLE clients; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1301,8 +1662,8 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.clients TO example_user;
 
 
 --
--- TOC entry 3572 (class 0 OID 0)
--- Dependencies: 249 3571
+-- TOC entry 3600 (class 0 OID 0)
+-- Dependencies: 249 3599
 -- Name: COLUMN clients.id; Type: ACL; Schema: public; Owner: postgres
 --
 
@@ -1310,8 +1671,8 @@ GRANT SELECT(id) ON TABLE public.clients TO user_2;
 
 
 --
--- TOC entry 3573 (class 0 OID 0)
--- Dependencies: 249 3571
+-- TOC entry 3601 (class 0 OID 0)
+-- Dependencies: 249 3599
 -- Name: COLUMN clients.name; Type: ACL; Schema: public; Owner: postgres
 --
 
@@ -1319,7 +1680,7 @@ GRANT SELECT(name) ON TABLE public.clients TO user_2;
 
 
 --
--- TOC entry 3575 (class 0 OID 0)
+-- TOC entry 3603 (class 0 OID 0)
 -- Dependencies: 251
 -- Name: TABLE expensive_products; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1332,7 +1693,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.expensive_products TO managers;
 
 
 --
--- TOC entry 3576 (class 0 OID 0)
+-- TOC entry 3609 (class 0 OID 0)
 -- Dependencies: 252
 -- Name: TABLE order_items; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1346,7 +1707,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.order_items TO example_user;
 
 
 --
--- TOC entry 3578 (class 0 OID 0)
+-- TOC entry 3611 (class 0 OID 0)
 -- Dependencies: 254
 -- Name: TABLE orders; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1361,7 +1722,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.orders TO example_user;
 
 
 --
--- TOC entry 3579 (class 0 OID 0)
+-- TOC entry 3612 (class 0 OID 0)
 -- Dependencies: 255
 -- Name: TABLE orders_clients; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1374,7 +1735,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.orders_clients TO managers;
 
 
 --
--- TOC entry 3580 (class 0 OID 0)
+-- TOC entry 3613 (class 0 OID 0)
 -- Dependencies: 256
 -- Name: TABLE orders_clients1; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1386,7 +1747,7 @@ GRANT DELETE ON TABLE public.orders_clients1 TO delete_role;
 GRANT SELECT,INSERT,UPDATE ON TABLE public.orders_clients1 TO managers;
 
 
--- Completed on 2023-06-23 11:54:17
+-- Completed on 2023-06-23 13:43:14
 
 --
 -- PostgreSQL database dump complete
