@@ -72,7 +72,7 @@
   </header>
   <nav>
     <ul class="menu">
-      <li><a href="index.php?C=1"><img src="Сайт значки/Меню.png" alt=""></a></li>
+      <li><a href="index.php?C=6"><img src="Сайт значки/Меню.png" alt=""></a></li>
       <li><a href="index.php?C=1">Велосипеды</a></li>
       <li><a href="index.php?C=2">Аксессуары</a></li>
       <li><a href="index.php?C=3">Запчасти</a></li>
@@ -93,6 +93,7 @@
                 case "3": echo(file_get_contents("objects3.html"));break;
                 case "4": echo(file_get_contents("objects4.html"));break;
                 case "5": echo(file_get_contents("objects5.html"));break;
+                case "6": echo(file_get_contents("objects6.html"));break;
               }
           ?>
       </div>
