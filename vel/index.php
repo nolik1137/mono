@@ -1,154 +1,131 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fi.ru</title>
-    <link rel="stylesheet" href="css/tr1.css" id="theme">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;800&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fi.ru </title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="poisk">
-                <div class="znch">
-                    <a href="index.php">
-                        <img src="Сайт значки/Значок.png" alt="">
-                    </a>
-                </div>
-                <div class="search">
-                    <form class="search1">
-                        <input type="text" class="search1">
-                    </form>
-                    <a href="#" class="searchp">
-                        <img src="Сайт значки/search.png" alt="">
-                    </a>
-                <div >
-                    <a href="#" class="vhod">
-                        Вход
-                    </a>
-                    <a href="reg.php" class="reg">
-                        Регистрация 
-                    </a>
-                </div>
-                </div>
-                
-                <div class="shop">
-                    <a href="#">
-                        <img src="Сайт значки/shopping-bag.png" alt="">
-                    </a>
-                </div>
-                <div class="heart">
-                   <a href="#">
-                        <img src="Сайт значки/heart.png" alt="">
-                    </a>
-                </div>
+  <header>
+    <div class="site-icon">
+      <a href="index.php"><img src="Сайт значки/Значок.png" alt=""></a>
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Я ищу..." />
+    </div>
+    <div class="auth-links">
+      <a href="#" id="registerLink">Регистрация</a>
+      <div id="registrationFormOverlay">
+        <div id="registrationForm">
+          <form  action="final.php" name="main-form" id="main-form" method="post">
+            <div class="form-input">
+                <input  title="Только кириллица." required pattern="^[А-Яа-яЁё\s]+$" type="text" name="name" placeholder="Имя" id="name" class="form-control">
             </div>
-            
-        </div>
-        
-    </header>
-
-    <section class="section">
-        <div class="container">
-            <div class="aks" id="aks">
-                <ul class="menu" id="menu">
-                    <li>
-                        <a href="index.php?C=1" class="zmenu">
-                            <img src="Сайт значки/Меню.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.php?C=2">
-                            Аксессуары
-                            
-                            
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.php?C=3">
-                            Запчасти
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.php?C=4">
-                            Веломастерская
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.php?C=5">
-                            Самокаты
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.php?C=6">
-                            Экипировка
-                        </a>
-                    </li> 
-                </ul>
-                                 
+            <div class="form-input">
+                <input  required  pattern="[A-Za-z]{6,}[0-9]{3}"  type="password" title="Не менее шести латинских букв и три цифры"  name="pass" placeholder="Пароль" id="pass" > 
             </div>
-            
-            
+            <div class="form-input">
+                <input required title="Ваш номер телефона" pattern="[0-9]{9,12}"  type="text" name="phone" placeholder="Номер телефона" id="phone">
+            </div>
+            <div class="form-input">
+                <input title="Только Латиница" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="fi@****.com" name="email" id="email" type="text"> 
+            </div>
+            <div class="form-input">
+                <input name="age" type="number" value="" placeholder="Возраст"> 
+            </div>
+            <div class="text-consent">
+                Согласие на обработку персональных данных:
+                <input type="checkbox" name="terms" checked> 
+            </div>                  
+            <div class="form-input">
+                <span id="error" style="color:red"></span>
+            <input type="submit" name="submit" class="btn btn-default" value="Зарегистрироваться">
+            </div>
         </div>
+      </div>
+      <a href="#" class="loginLink"  id="loginLink">Вход</a>
+<div id="loginFormOverlay" class="loginFormOverlay">
+  <div id="loginForm" class="loginForm">
+    <form>
+      <h3 class="text-center">Вход</h3>
+      <div class="form-group">
+        <input class="login-name" type="text" name="username" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="Логин" required>
+      </div>
+      <div class="form-group">
+        <input class="login-password" type="password" name="Пароль" minlength="6" id="password" placeholder="Пароль" required>
+      </div>
+      <div class="form-group">
+        <button class="button-login" type="submit">Вход в аккаунт</button>
+      </div>
+    </form>
+  </div>
+</div>
+       
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.php?C=1"><img src="Сайт значки/Меню.png" alt=""></a></li>
+      <li><a href="index.php?C=1">Велосипеды</a></li>
+      <li><a href="index.php?C=2">Аксессуары</a></li>
+      <li><a href="index.php?C=3">Запчасти</a></li>
+      <li><a href="index.php?C=4">Самокаты</a></li>
+      <li><a href="index.php?C=5">Экипировка</a></li>
+    </ul>
+  </nav>
+  
+  <main>
     
     <div id="container" >
         <div id="objects">
             <?php
-            $C=$_GET["C"];
-            switch($C){
+              $C=$_GET["C"];
+              switch($C){
                 case "1": echo(file_get_contents("objects1.html"));break;
                 case "2": echo(file_get_contents("objects2.html"));break;
                 case "3": echo(file_get_contents("objects3.html"));break;
                 case "4": echo(file_get_contents("objects4.html"));break;
                 case "5": echo(file_get_contents("objects5.html"));break;
-                case "6": echo(file_get_contents("objects6.html"));break;
-            
+              }
+          ?>
+      </div>
+      <div id="content" class="content">
+            <?php
+            $O=$_GET["O"];
+            switch($O){
+                case "1-1":echo(file_get_contents("object1-1.html"));break;
+                case "1-2":echo(file_get_contents('object1-2.html'));break;
+                case "1-3":echo(file_get_contents('object1-3.html'));break;
                 }
             ?>
         </div>
     </div> 
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="niz">
-                <div class="soci">
-                    <div class="textsoci">
-                        Мы в социальных сетях:
-                    </div>
-                    <div class="znsoci">
-                        <div class="facb">
-                            <a href="">
-                                <img src="Сайт значки/facebook.png" class="imgfacb">
-                            </a>
-                            
-                        </div>
-                        <div class="ytb">
-                            <a href="">
-                                <img src="Сайт значки/youtube.png" class="imgytb">
-                            </a>
-                        </div>
-                        <div class="twit">
-                            <a href="">
-                                <img src="Сайт значки/twitter.png" class="imgtwit">
-                            </a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="stobr">
-                    ©Fi.ru 2022
-                </div>
-                
-            </div>
-                
-        </div>
-    </footer>
-    <script src="Java/java.js"></script>
+  </main>
+  <footer>
+    <span>©Fi.ru 2022</span>
+    <div class="social-links">
+      Мы в социальных сетях:
+      <a href="#">
+        <img src="Сайт значки/youtube.png" alt="Social Icon">
+        YouTube
+      </a>
+      <a href="#">
+        <img src="Сайт значки/twitter.png" alt="Social Icon">
+        Twitter
+      </a>
+      <a href="#">
+        <img src="Сайт значки/facebook.png" alt="Social Icon">
+        Facebook
+      </a>
+    </div>
+  </footer>
+  <script src="java/java.js"></script>
 </body>
 </html>
