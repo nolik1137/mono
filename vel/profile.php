@@ -9,10 +9,8 @@
 </head>
 <?php
 session_start();
-
-if($_SESSION['user'])
-{
-  header('Location:profile.php');
+if(!$_SESSION['user']){
+  header('Location:index.php');
 }
 
 ?>
@@ -25,11 +23,21 @@ if($_SESSION['user'])
       <input type="text" placeholder="Я ищу..." />
     </div>
     <div class="auth-container">
-          <button id="profileLink" class="link-button">
-              <a href="profile.php" target="_blank">Профиль</a>
-          </button>
+        <div class="profile_log">
+            <img src="<?=$_SESSION['user']['avatar'] ?>" width="75px" alt="">
+            <h2><?=$_SESSION['user']['full_name'] ?></h2>
+            <a href=""><?=$_SESSION['user']['email'] ?></a>
+        </div>
         <div class="auth-links">
-      <button id="registerLink" class="link-button">Регистрация</button>
+            <button id="profileLink" class="link-button">
+                <a href="profile.php" target="_blank">Профиль</a>
+            </button>
+            <button id="registerLink" class="link-button">Регистрация</button>
+            <form action="logout.php" target="_blank">
+  <button class="login-link" type="submit">Выход</button>
+</form>
+
+
       <div id="registrationFormOverlay">
         <div id="registrationForm">
           <form action="reg/signup.php" name="main-form" id="main-form" method="POST" enctype="multipart/form-data">
@@ -72,29 +80,10 @@ if($_SESSION['user'])
         </div>
       </div>
     </div>
+    </div>
+  </div>
+</div>
 
-<button class="loginLink" id="loginLink" type="button">Вход</button>
-<div id="loginFormOverlay" class="loginFormOverlay">
-  <div id="loginForm" class="loginForm">
-    <form action="reg/signin.php" method="POST">
-      <h3 class="text-center">Вход</h3>  
-      <div class="form-group">
-        <input class="login-name" type="text" name="login" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="us ername" placeholder="Логин" required>
-      </div>
-      <div class="form-group">
-        <input class="login-password" type="password" name="password" minlength="6" id="password" placeholder="Пароль" required>
-      </div>
-      <div class="form-group">
-        <button class="button-login" type="submit">Вход в аккаунт</button>
-       </div>
-      </form>
-    </div>
-  </div>
-</div>
-       
-    </div>
-  </div>
-</div>
         </div>
       </div>
     </div>
